@@ -1,3 +1,3 @@
 GuiTabline 0
 GuiPopupmenu 0
-GuiFont Ricty Diminished:h14
+GuiFont Ricty Diminished:h13
