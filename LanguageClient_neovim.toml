@@ -1,0 +1,12 @@
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim_next'
+
+hook_add = '''
+
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['C:\ProgramData\Anaconda3\envs\main_env\Scripts\pyls'],
+    \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
+    \ }
+'''

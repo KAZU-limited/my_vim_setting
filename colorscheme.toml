@@ -1,0 +1,30 @@
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+
+[[plugins]]
+repo = 'vivkin/flatland.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'marciomazza/vim-brogrammer-theme'
+
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+
+[[plugins]]
+repo = 'icymind/NeoSolarized'
+
+[[plugins]]
+repo = 'lifepillar/vim-solarized8'
+
+hook_add = '''
+
+'''

@@ -1,6 +1,14 @@
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+
+hook_add = '''
 function! Echo_test() 
 	echo 'testtest'
 endfunction
+
+" nnoremap ge :Defx . -show-ignored-files<CR>
+nnoremap <C-d><C-w> :Defx -show-ignored-files -split=vertical -winwidth=30 -direction=topleft<CR>
+nnoremap <C-d><C-e> :Defx -show-ignored-files<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
@@ -67,12 +75,14 @@ function! s:defx_my_settings() abort
   \ defx#do_action('print')
   nnoremap <silent><buffer><expr> cd
   \ defx#do_action('change_vim_cwd')
-"   nnoremap <silent><buffer><expr> bm
-"  \ defx#do_action('defx/drive')
   nnoremap <silent><buffer><expr> <C-f>
   \ defx#do_action('search')
-  nnoremap <silent><buffer> bm
-  \ :call defx#do_action('yank_path') \|echo 'testtest'<CR>
+  nnoremap <silent><buffer><expr> bm
+  \ defx#do_action('echotest_1')
+
+"   nnoremap <silent><buffer><expr> bm
+"  \ defx#do_action('defx/drive')
+"  \ :call defx#do_action('yank_path') \|echo 'testtest'<CR>
 "  \ Echo_test()
 
 endfunction
@@ -90,3 +100,4 @@ call defx#custom#source('file', {
 call defx#custom#source('file', {'root': 'Root'})
 " call defx#custom#source('defx/drive', {'root': 'Root'})
 
+'''
