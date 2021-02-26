@@ -1,0 +1,12 @@
+
+{
+"python.jediPath":"C:\\ProgramData\\Anaconda3\\envs\\main_env\\Lib\\site-packages\\jedi\\",
+ "python.jediEnabled": false,
+	"languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "args": ["-c", "C:\\Users\\K'\\AppData\\Roaming\\efm-langserver\\config.yaml"],
+      "filetypes": ["vim", "sql"]
+    }
+	}
+}

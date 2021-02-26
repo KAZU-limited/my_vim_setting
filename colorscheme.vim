@@ -1,7 +1,8 @@
 " colorscheme flatland
 "
 set background=dark
-colorscheme NeoSolarized
+colorscheme brogrammer
+" colorscheme NeoSolarized
 " AirlineTheme solarized
 " hi normal guibg=#000000
 
@@ -17,9 +18,9 @@ let g:solarized_italic=1
 let g:solarized_contrast='normal'
 let g:solarized_visibility='normal'
 
-" let g:airline_theme = 'codedark'
+let g:airline_theme = 'codedark'
 " let g:airline_theme = 'simple'
-let g:airline_theme = 'solarized'
+" let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 0
 " let g:airline#extensions#tabline#show_tab_count = 5
 " let g:airline#extensions#tabline#show_tabs = 5

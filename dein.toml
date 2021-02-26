@@ -2,5 +2,4 @@
 repo = 'C:\Projects\d-bookmark\'
 
 [[plugins]]
-repo = 'C:\Projects\test_plugin\'
-
+repo = 'C:\Projects\sql-formatter-vim\'

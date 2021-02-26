@@ -17,13 +17,13 @@ repo = 'jonathanfilip/vim-lucius'
 repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
-repo = 'tomasiser/vim-code-dark'
-
-[[plugins]]
 repo = 'icymind/NeoSolarized'
 
 [[plugins]]
 repo = 'lifepillar/vim-solarized8'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
 
 hook_add = '''
 
