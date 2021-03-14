@@ -177,7 +177,7 @@ source $XDG_CONFIG_HOME/nvim/colorscheme.vim
 source $XDG_CONFIG_HOME/nvim/denite.vim
 source $XDG_CONFIG_HOME/nvim/defx.vim
 
-" source C:\Neovim\_config\nvim\coc_setting.vim
+source $XDG_CONFIG_HOME/nvim/coc_setting.vim
 " source $XDG_CONFIG_HOME/nvim/R.vim
 " source $XDG_CONFIG_HOME/nvim/autopep8.vim
 " call coc#util#install()
