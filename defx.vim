@@ -1,21 +1,11 @@
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-
-hook_add = '''
-function! Echo_test() 
-	echo 'testtest'
-endfunction
-
-" nnoremap ge :Defx . -show-ignored-files<CR>
-nnoremap <C-d><C-w> :Defx -show-ignored-files -split=vertical -winwidth=30 -direction=topleft<CR>
-nnoremap <C-d><C-e> :Defx -show-ignored-files<CR>
+" Defx setting
+nnoremap e. :Defx<cr>
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
   nnoremap <silent><buffer><expr> <CR>
   \ defx#do_action('open')
-"  \ defx#do_action('drop')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
@@ -27,9 +17,9 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> E
   \ defx#do_action('open', 'vsplit')
   nnoremap <silent><buffer><expr> P
-  \ defx#do_action('open', 'pedit')
+  \ defx#do_action('preview')
   nnoremap <silent><buffer><expr> o
-  \ defx#do_action('open_or_close_tree')
+  \ defx#do_action('open_tree', 'toggle')
   nnoremap <silent><buffer><expr> K
   \ defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> N
@@ -77,27 +67,13 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
   nnoremap <silent><buffer><expr> <C-f>
   \ defx#do_action('search')
-  nnoremap <silent><buffer><expr> bm
-  \ defx#do_action('echotest_1')
-
-"   nnoremap <silent><buffer><expr> bm
-"  \ defx#do_action('defx/drive')
-"  \ :call defx#do_action('yank_path') \|echo 'testtest'<CR>
-"  \ Echo_test()
-
 endfunction
 
-" call defx#custom#option('_', 'drives',readfile('C:\Neovim\_config\nvim\bookmark.txt'))
+call defx#custom#option('default',{
+  \ 'floating_preview':v:false,
+  \ 'vertical_preview':v:true,
+  \ 'show_ignored_files':v:true,
+  \ 'preview_width':100,
+  \ 'preview_height':50
+  \ })
 
-function! Root(path) abort
-	return fnamemodify(a:path, ':t')
-endfunction
-	
-call defx#custom#source('file', {
-		     \ 'root': 'Root',
-		     \})
-
-call defx#custom#source('file', {'root': 'Root'})
-" call defx#custom#source('defx/drive', {'root': 'Root'})
-
-'''

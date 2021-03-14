@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='C:/'
+let g:netrw_dirhist_6='C:/Projects'
+let g:netrw_dirhist_5='C:/Neovim/_config/nvim'
+let g:netrw_dirhist_4='C:/Neovim/_config'
+let g:netrw_dirhist_3='C:/Neovim'
+let g:netrw_dirhist_2='C:/'
+let g:netrw_dirhist_1='C:/Projects'
+let g:netrw_dirhist_0='C:/Neovim/_config/nvim'
+let g:netrw_dirhist_9='C:/Neovim/_config'
+let g:netrw_dirhist_8='C:/Neovim'

@@ -1,7 +1,7 @@
-" colorscheme flatland
+colorscheme flatland
 "
 set background=dark
-colorscheme brogrammer
+" colorscheme brogrammer
 " colorscheme NeoSolarized
 " AirlineTheme solarized
 " hi normal guibg=#000000
@@ -95,7 +95,7 @@ autocmd FileType python highlight link txtString Special
 "highlight Comment ctermfg=20 guifg=Gray
 
 " set hlsearch
-" hi search guibg=#DDDDDD guifg=#000000
+hi search guibg=#DDDDDD guifg=#000000
 set number
 hi ActiveWindow guibg=#17252c
 hi InactiveWindow guibg=#0D1B22
