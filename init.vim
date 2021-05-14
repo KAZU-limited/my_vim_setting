@@ -13,12 +13,13 @@ set noswapfile
 "inoremap <ESC> <ESC>:set iminsert=0<CR>:set imsearch=0<CR>
 "
 "
-autocmd! BufNewFile,BufRead *.html nnoremap <C-s> :!start %<CR>
+autocmd! BufNewFile,BufRead *.html nnoremap <C-s> :!xdg-open %<CR>
 
 nnoremap rn :f \|call delete(expand('#')) \|w<Home><Right>
 nnoremap tn :tabnew<CR>
-" nnoremap tl gt
-" nnoremap gr gT
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+"
 nnoremap <C-TAB> gt 
 nnoremap <C-S-TAB> gT 
 tnoremap <C-TAB> gt 
@@ -91,6 +92,8 @@ let g:denite#bookmark_info='C:\Neovim\bookmark.txt'
 let g:previm_open_cmd = 'start'
 let g:previm_enable_realtime = 1
 
+nnoremap <A-h> :!xdg-open %<CR>
+
 set tags =.\tags;
 
 if has('win32') || has('win64')
@@ -105,7 +108,8 @@ if has('win32') || has('win64')
 	vmap <C-/> <Plug>(caw:zeropos:toggle)
 elseif has('unix')
 
-	let plugin_dir = '~/nvim_dir/plugin/'
+	set runtimepath+=~/.nvim/repos/github.com/Shougo/dein.vim
+	let plugin_dir = '~/.nvim/repos'
 	let g:python3_host_prog = '/usr/bin/python3'
 	nmap <C-_> <Plug>(caw:zeropos:toggle)
 	vmap <C-_> <Plug>(caw:zeropos:toggle)
@@ -115,7 +119,7 @@ endif
 " nnoremap cp :cd expand(plugin_dir)<CR>
 "
 
-set runtimepath+=C:\Projects\d-bookmark
+"set runtimepath+=C:\Projects\d-bookmark
 
 call dein#begin(plugin_dir)
 
@@ -173,7 +177,7 @@ nnoremap gl :tabnew<CR>:terminal w3m https://eow.alc.co.jp/search?q=""<Left><C-r
 nnoremap gs :tabnew<CR>:terminal googler <C-r>0<CR>
 
 source $XDG_CONFIG_HOME/nvim/colorscheme.vim
-" source $XDG_CONFIG_HOME/nvim/python.vim
+source $XDG_CONFIG_HOME/nvim/python.vim
 source $XDG_CONFIG_HOME/nvim/denite.vim
 source $XDG_CONFIG_HOME/nvim/defx.vim
 
